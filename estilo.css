@@ -1,15 +1,20 @@
 body {
-    background-color:#CABFB5;
+    background-color:#8dcd85;
 }
 
 h1 {
     background-color: forestgreen;
+    
 }
 
 p {
-    color:rgba(126, 54, 54, 0.423);
+    color:rgba(1, 1, 1, 0.814);
 }
 
 #galeria {
-    background-color: rgb(21, 89, 89);
+    width: 50vw;
+}
+
+.foto {
+width: 40%;
 }
