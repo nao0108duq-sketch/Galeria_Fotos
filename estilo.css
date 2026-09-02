@@ -65,14 +65,14 @@ img {
     width: 100%;
 }
 
-/* Cambio de ambiente */
+
 
 .oscuro {
     background-color: #24213d;
     color: #000000;
 }
 
-/* Final */
+
 
 .final {
     font-size: 36px;
@@ -81,7 +81,7 @@ img {
 }
 
 
-/* Adaptación para celulares */
+
 
 @media (max-width: 600px) {
 
