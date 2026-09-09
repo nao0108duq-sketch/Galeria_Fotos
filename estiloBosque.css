@@ -1,0 +1,33 @@
+body { 
+    background-image: url(assets/Jardin\ 2.jpg);
+}
+
+
+a, a:active {
+    color:blueviolet;
+    font-size: 2em;
+}
+
+a:visited { 
+    color:green;
+}
+
+a:hover { 
+    color:blue;
+}
+
+#video { 
+    width: 50vw;
+    height: 50vh;
+    position: fixed;
+    top:5;
+    left:50;
+
+}
+
+#enlace {
+    position: fixed;
+    left: 30%;
+    bottom: 50%;
+
+}
