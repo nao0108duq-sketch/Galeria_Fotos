@@ -7,6 +7,10 @@ body {
     background-color: #7d8050;
     color: #000000;
     font-family: "Lucida Calligraphy", "URW Chancery L", cursive;
+
+    animation-name: cambioColor;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
 }
 
 main,
@@ -28,6 +32,11 @@ h1 {
     font-size: 38px;
     font-weight: normal;
     margin-bottom: 100px;
+
+    animation-name: cambiarBorde;
+    animation-duration: 6s;
+    animation-iteration-count: infinite;
+
 }
 
 p {
@@ -140,4 +149,28 @@ img.visible {
     user-select: none;
 
     transition: left 0.8s ease, top 0.8s ease;
+}
+
+@keyframes cambiarBorde {
+    0% {border: solid black 3px; font-size: 1em;
+    50% {border: solid rgb(241,47,47) 6px; font-size 2em;
+    100% {border: solid #6d63c7 9px; font-size: 3em;  
+
+
+  }  
+
+@keyframes cambioColor {
+    0% {background-color: rgb(239,228,19);}
+    25% {background-color: rgb(5, 60, 67);}
+    50% {background-color: rgb(60, 169, 169);}  
+    75% {background-color: rgb(5, 67, 67);} 
+    100% {background-color: rgb(36, 233, 233);}       
+}
+
+/* estilo segun la media de la pantalla */
+
+@media (max-width: 1000px); {
+#galeria {
+    height: fit-content;
+}
 }
