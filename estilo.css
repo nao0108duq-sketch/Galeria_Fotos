@@ -113,3 +113,31 @@ img {
         font-size: 28px;
     }
 }
+
+p,
+img {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 3s ease, transform 3s ease;
+}
+
+p.visible,
+img.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* conejo movil */
+
+#conejo-movil {
+    position: fixed;
+    left: 50%;
+    top: 50%;
+
+    font-size: 50px;
+
+    z-index: 1000;
+    user-select: none;
+
+    transition: left 0.8s ease, top 0.8s ease;
+}

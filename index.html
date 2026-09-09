@@ -10,6 +10,8 @@
 
 <body>
 
+    <div id="conejo-movil">🐇</div>
+
     <main>
 
         <h1>EL SUEÑO DE ALICIA</h1>
@@ -119,6 +121,102 @@
         <p class="final">“Alicia…”</p>
 
     </main>
+
+    <script>
+
+
+    const elementos = document.querySelectorAll("p, img");
+
+    const observador = new IntersectionObserver((entradas) => {
+
+        entradas.forEach((entrada) => {
+
+            if (entrada.isIntersecting) {
+                entrada.target.classList.add("visible");
+            }
+
+        });
+
+    }, {
+        threshold: 0.2
+    });
+
+
+    elementos.forEach((elemento) => {
+        observador.observe(elemento);
+    });
+
+
+
+    /* CONEJO QUE SE MUEVE */
+
+    const conejo = document.getElementById("conejo-movil");
+
+    function moverConejo() {
+
+        const margen = 100;
+
+        const x =
+            Math.random() * (window.innerWidth - margen * 2) + margen;
+
+        const y =
+            Math.random() * (window.innerHeight - margen * 2) + margen;
+
+        conejo.style.left = x + "px";
+        conejo.style.top = y + "px";
+    }
+
+
+
+    /* EL CONEJO SE MUEVE SOLO */
+
+    setInterval(function() {
+
+        moverConejo();
+
+    }, 2000);
+
+
+
+    /* EL CONEJO HUYE DEL CURSOR */
+
+    document.addEventListener("mousemove", function(evento) {
+
+        const rect = conejo.getBoundingClientRect();
+
+        const conejoX =
+            rect.left + rect.width / 2;
+
+        const conejoY =
+            rect.top + rect.height / 2;
+
+
+        const distanciaX =
+            evento.clientX - conejoX;
+
+        const distanciaY =
+            evento.clientY - conejoY;
+
+
+        const distancia = Math.sqrt(
+            distanciaX * distanciaX +
+            distanciaY * distanciaY
+        );
+
+
+
+        if (distancia < 200) {
+
+            moverConejo();
+
+        }
+
+    });
+
+
+    moverConejo();
+
+</script>
 
 </body>
 </html>
